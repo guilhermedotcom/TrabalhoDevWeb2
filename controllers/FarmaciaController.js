@@ -1,4 +1,5 @@
 const farmacia = require("../models/FarmaciaSchema");
+const produto = require("../models/ProdutoSchema");
 
 class FarmaciaController{
     async store(req, res){
@@ -24,8 +25,9 @@ class FarmaciaController{
         res.status(200).json(result);
     }
     async delete(req, res){
+        var resultProduto = await produto.deleteMany({cnpjFarmacia: req.params.cnpj});
         var result = await farmacia.deleteOne({cnpj: req.params.cnpj});
-        res.status(200).json(result);
+        res.status(200).json([result, resultProduto]);
     }
 }
 
