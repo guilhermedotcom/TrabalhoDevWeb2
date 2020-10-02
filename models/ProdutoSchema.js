@@ -18,7 +18,11 @@ const produtoSchema = new mongoose.Schema({
     type: String,
     required: [true, "O campo descrição é obrigatório"],
   },
+  cnpjFarmacia: {
+    type: String,
+    required: [true, "O campo cnpj é obrigatório"],
+  },
   criadoEm: { type: Date, default: Date.now }
 });
 
-module.exports = produtoSchema;
+module.exports = mongoose.model("Produtos", produtoSchema);

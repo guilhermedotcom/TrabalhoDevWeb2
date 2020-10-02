@@ -4,20 +4,7 @@ content-type: application/json
 
 {
     "nome": "Farmacia 1",
-    "cnpj": "111",
-    "produtos": [{
-        "nome": "Sabonete",
-        "codigo": "54321",
-        "preco": 12,
-        "descricao": "perfumaria"
-    },
-    {
-        "nome": "Cereal",
-        "codigo": "12345",
-        "preco": 13,
-        "descricao": "alimentação"
-    }
-    ]
+    "cnpj": "111"
 }
 
 ###
@@ -31,16 +18,51 @@ POST http://localhost:1234/farmacia/alterar
 content-type: application/json
 
 {
-    "nome": "Farmacia 1",
-    "cnpj": "111",
-    "produtos": [{
-        "nome": "Refrigerante",
-        "codigo": "54321",
-        "preco": 27,
-        "descricao": "bebidas"
-    }
-    ]
+    "nome": "Farmacia 2",
+    "cnpj": "111"
 }
 
 ###
 GET http://localhost:1234/farmacia/remover/111
+
+
+
+
+
+
+
+
+
+
+###
+POST http://localhost:1234/produto/cadastrar
+content-type: application/json
+
+{    
+    "nome": "Sabonete",
+    "codigo": "12345",
+    "preco": 12,
+    "descricao": "perfumaria",
+    "cnpjFarmacia": "111"
+}
+
+###
+GET http://localhost:1234/produto/buscar/111/54321
+
+###
+GET http://localhost:1234/produto/listar/111
+
+###
+POST http://localhost:1234/produto/alterar
+content-type: application/json
+
+{
+    "nome": "Suco",
+    "codigo": "54321",
+    "preco": 27,
+    "descricao": "bebidas",
+    "cnpjFarmacia": "111"
+}
+
+###
+GET http://localhost:1234/produto/remover/111/54321
