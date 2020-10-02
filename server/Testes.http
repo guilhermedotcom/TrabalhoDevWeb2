@@ -19,7 +19,7 @@ content-type: application/json
 
 {
     "nome": "Farmacia 2",
-    "cnpj": "111"
+    "cnpj": "555"
 }
 
 ###

@@ -1,5 +1,5 @@
-import { Farmacia } from '../../../models/Farmacia';
-import { FarmaService } from '../../../services/farma.service';
+import { Farmacia } from './../../../models/Farmacia';
+import { FarmaService } from './../../../services/farma.service';
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 
@@ -22,7 +22,7 @@ export class ListFarmaComponent implements OnInit {
     });
   }
 
-  navigateToCreateCycle(): void {
+  navigateToCreateFarma(): void {
     this.router.navigate(['farma/create']);
   }
 

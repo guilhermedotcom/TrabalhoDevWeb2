@@ -1,9 +1,15 @@
-<label>Data do cadastro</label>
 <input 
     type="text" 
-    placeholder="Data do cadastro"
-    name="date"
-    [(ngModel)]="farma.date"
+    placeholder="Nome da Farmácia"
+    name="nome"
+    [(ngModel)]="farma.nome"
+/>
+
+<input 
+    type="text" 
+    placeholder="CNPJ da Farmácia"
+    name="cnpj"
+    [(ngModel)]="farma.cnpj"
 />
 
 <button (click)="create()">Cadastrar</button>

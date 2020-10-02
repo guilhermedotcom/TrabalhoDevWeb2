@@ -10,8 +10,8 @@ import { FarmaService } from 'src/app/services/farma.service';
 export class CreateFarmaComponent implements OnInit {
   
   farma: Farmacia = {
-    nome: "joao",
-    cnpj: "555"
+    nome: "",
+    cnpj: ""
   };
 
   constructor(private service: FarmaService) {}
